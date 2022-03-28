@@ -1,7 +1,26 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from Portfolio.models import Message
 
 # Create your views here.
+lastRequest = ""
+newRequest = ""
+context = {
+    'Name': " Example"
+}
+
+
+def should_render_success(request, lrequest):
+    if lrequest == "POST/contact" and request == "GET/contact":
+        return True
+    return False
+
+
+def form_validation(form: dict) -> bool:
+    for item in form:
+        if str(form[item]).isspace():
+            if item != 'linkedin':
+                return False
+    return True
 
 
 def Home(request):
@@ -17,15 +36,39 @@ def Projects(request):
 
 
 def ContactMe(request):
+    global lastRequest, newRequest
+    newRequest = request.method + request.path
+
+    if should_render_success(newRequest, lastRequest):
+        lastRequest = request.method + request.path
+        return render(request, 'success.html', context)
+
     if request.method == "POST":
-        email = request.POST['email']
-        fname = request.POST['fname']
-        lname = request.POST['lname']
-        pnumber = request.POST['pnumber']
-        linkedin = request.POST['linkedinurl']
-        subject = request.POST['sbjt']
-        message = request.POST['msg']
-        Data = Message(e_mail=email, first_name=fname, last_name=lname,
-                       phone_number=pnumber, liurl=linkedin, subject=subject, message=message)
-        Data.save()
+        form = {
+            'email': request.POST['email'],
+            'fname': request.POST['fname'],
+            'lname': request.POST['lname'],
+            'pnumber': request.POST['pnumber'],
+            'linkedin': request.POST['linkedinurl'],
+            'subject': request.POST['sbjt'],
+            'message': request.POST['msg'],
+        }
+
+        lastRequest = request.method + request.path
+        context['Name'] = " " + form['fname']
+
+        if form_validation(form):
+            Data = Message(
+                e_mail=str(form['email']),
+                first_name=form['fname'],
+                last_name=form['lname'],
+                phone_number=form['pnumber'],
+                liurl=form['linkedin'],
+                subject=form['subject'],
+                message=form['message']
+            )
+            Data.save()
+            return redirect(ContactMe)
+
+    lastRequest = request.method + request.path
     return render(request, 'contact.html')

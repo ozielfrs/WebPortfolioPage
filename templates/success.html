@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block titlepage %}Sucesso!{% endblock titlepage %}
+
+{% block bodytxt %}text-light{% endblock bodytxt %}
+{% block bodybg %}background-color: #02021c{% endblock bodybg %}
+
+{% block oColor %}text-light{% endblock oColor %}
+
+{% block headerimagepath %}
+{% static '/media/beel_grand.png' %}
+{% endblock headerimagepath %}
+
+{% block homeactive %}link-light{% endblock homeactive %}
+{% block projectsactive %}link-light{% endblock projectsactive %}
+{% block contactactive %}link-light{% endblock contactactive %}
+{% block aboutactive %}link-light{% endblock aboutactive %}
+
+{% block body %}
+<main class="px-3 text-center">
+    <h1>Obrigado por enviar sua mensagem{{Name}}!</h1>
+    <p class="lead">Agora você pode continuar explorando o site o quanto quiser.
+    </p>
+    <img src="{% static '/media/glorious_success.png' %}" alt="Success" width="512">
+</main>
+{% endblock body %}
+{% block footerlink %}link-light{% endblock footerlink %}
+{% block footerlink0 %}link-light{% endblock footerlink0 %}

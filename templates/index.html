@@ -14,10 +14,11 @@
     <title>Oziel | {% block titlepage %}{% endblock titlepage %}</title>
 </head>
 
-<body>
+<body class="{% block bodytxt %}{% endblock bodytxt %}" style="{% block bodybg %}{% endblock bodybg %}">
     <div class="container">
         <header class="d-flex flex-wrap align-items-center justify-content-md-between py-3 mb-4 border-bottom">
-            <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+            <a href="/"
+                class="d-flex align-items-center col-md-3 mb-2 mb-md-0 {% block oColor %}{% endblock oColor %} text-decoration-none">
                 <img src="{% block headerimagepath %}{% endblock headerimagepath %}" height="128">
                 Oziel's Portfolio
             </a>
@@ -45,11 +46,11 @@
             <div class="d-flex justify-content-between py-4 my-4 border-top">
                 <p>&copy; 2022, Desenvolvido por Oziel Ferreira.</p>
                 <ul class="list-unstyled d-flex">
-                    <li class="ms-3"><a class="link-dark" href="https://github.com/o-ziel" target="_blank"
+                    <li class="ms-3"><a class="{% block footerlink %}{% endblock footerlink %}" href="https://github.com/o-ziel" target="_blank"
                             rel="noopener noreferrer">
                             <i class="fa-brands fa-github"></i>
                         </a></li>
-                    <li class="ms-3"><a class="link-dark" href="https://www.linkedin.com/in/o-ziel" target="_blank"
+                    <li class="ms-3"><a class="{% block footerlink0 %}{% endblock footerlink0 %}" href="https://www.linkedin.com/in/o-ziel" target="_blank"
                             rel="noopener noreferrer">
                             <i class="fa-brands fa-linkedin"></i>
                         </a></li>
