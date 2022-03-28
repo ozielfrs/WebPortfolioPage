@@ -32,7 +32,7 @@ ALLOWED_HOSTS = ['127.0.0.1', 'ozielportfolio.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
-    'portfolio',
+    'Portfolio',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

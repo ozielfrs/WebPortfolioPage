@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render
-from portfolio.models import Message
+from Portfolio.models import Message
 
 # Create your views here.
 lastRequest = ""
