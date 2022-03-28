@@ -1,0 +1,60 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block titlepage %}Início{% endblock titlepage %}
+
+{% block headerimagepath %}
+{% static '/media/jus_pc.png' %}
+{% endblock headerimagepath %}
+
+{% block homeactive %}{% endblock homeactive %}
+{% block projectsactive %}link-dark{% endblock projectsactive %}
+{% block contactactive %}link-dark{% endblock contactactive %}
+{% block aboutactive %}link-dark{% endblock aboutactive %}
+
+{% block body %}
+<div class="px-4 pt-5 my-5 text-center text-light border-bottom" style="background: linear-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, 1)), url({% static '/media/home_bg.png' %});
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;">
+    <h1 class="display-4 fw-bold">Boas-vindas ao meu Website</h1>
+    <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">Você pode explorar o site como quiser e se estiver à vontade pode também me enviar uma
+            mensagem pela aba contatos.</p>
+    </div>
+    <div class="container px-4 py-5" id="hanging-icons">
+        <h2 class="pb-2 border-bottom">Explore o Site</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+            <div class="col d-flex align-items-start">
+                <div>
+                    <h2>Meus Projetos</h2>
+                    <p>Informe-se sobre alguns dos projetos já desenvolvidos por mim clicando no botão abaixo.</p>
+                    <a href="/projects" class="btn btn-primary">
+                        <i class="fa-solid fa-list-check"></i> Ver projetos
+                    </a>
+                </div>
+            </div>
+            <div class="col d-flex align-items-start">
+                <div>
+                    <h2>Você pode me enviar uma mensagem!</h2>
+                    <p>Usando a página de contato você pode me enviar uma mensagem depois de preencher alguns dados.
+                        Elogios, críticas ou sugestões sobre esse portfólio.</p>
+                    <a href="/contact" class="btn btn-primary">
+                        <i class="fa-solid fa-address-book"></i> Enviar Mensagem
+                    </a>
+                </div>
+            </div>
+            <div class="col d-flex align-items-start">
+                <div>
+                    <h2>Me conheça melhor</h2>
+                    <p>Você pode ver mais informações sobre minha experiência, onde estudo e algumas redes a partir da
+                        aba 'Sobre', ou, se preferir, deste botão.</p>
+                    <a href="/about" class="btn btn-primary">
+                        <i class="fa-solid fa-address-card"></i> Sobre
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}

@@ -1,0 +1,122 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block titlepage %}Fale Comigo{% endblock titlepage %}
+
+{% block headerimagepath %}
+{% static '/media/jus_idle.png' %}
+{% endblock headerimagepath %}
+
+{% block homeactive %}link-dark{% endblock homeactive %}
+{% block projectsactive %}link-dark{% endblock projectsactive %}
+{% block contactactive %}{% endblock contactactive %}
+{% block aboutactive %}link-dark{% endblock aboutactive %}
+
+{% block body %}
+<div class="container-sm">
+    <h1 class="display-1-sm text-center my-4" id="contactme"> Fale Comigo </h1>
+    <div id="liveAlertPlaceholder"></div>
+    <form class="needs-validation" action="/contact" method="post" onsubmit="not_valid()" novalidate>
+        {% csrf_token %}
+        <div class="container">
+
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="emailadress" name="email" placeholder="Endereço de Email"
+                    aria-describedby="basic-addon1" required>
+                <label for="emailadress">Email</label>
+                <div class="invalid-feedback">
+                    Por favor, adicione um email válido.
+                </div>
+                <div class="valid-feedback">
+                    Maravilha!
+                </div>
+            </div>
+
+            <div class="row g-3 mb-3">
+                <div class="col">
+                    <input type="text" class="form-control" id="firstname" name="fname" placeholder="Nome"
+                        aria-label="Name" required>
+                    <div class="invalid-feedback">
+                        Por favor, insira um nome válido.
+                    </div>
+                    <div class="valid-feedback">
+                        Fantástico!
+                    </div>
+                </div>
+
+                <div class="col">
+                    <input type="text" class="form-control" id="lastname" name="lname" placeholder="Sobrenome"
+                        aria-label="LastName" required>
+                    <div class="invalid-feedback">
+                        Por favor, acrescente um sobrenome válido.
+                    </div>
+                    <div class="valid-feedback">
+                        Incrível!
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="igtPhone"><img src="{% static '/media/br_flag.png' %}"
+                        alt="Bandeira do Brasil" width="32">+55</span>
+                <input type="text" class="form-control" id="phone-number" name="pnumber"
+                    placeholder="Número de Telefone" required>
+                <div class="invalid-feedback">
+                    Por favor, preencha o campo com um número de telefone válido.
+                </div>
+                <div class="valid-feedback">
+                    Sensacional!
+                </div>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="igtUrl">https://www.linkedin.com/in/</span>
+                <input type="text" class="form-control" id="liurl" name="linkedinurl"
+                    placeholder="Link para LinkedIn (Opcional)" aria-describedby="basic-addon3">
+            </div>
+
+            <div class="form-floating mb-3">
+                <textarea class="form-control" placeholder="Assunto" id="subject" name="sbjt" minlength="4" required
+                    style="resize: none"></textarea>
+                <label for="subject">Assunto</label>
+                <div class="invalid-feedback">
+                    Por favor, digite um assunto para a mensagem, ele deve ter no mínimo 4 caracteres.
+                </div>
+                <div class="valid-feedback">
+                    Legal!
+                </div>
+            </div>
+
+            <div class="form-floating mb-3">
+                <textarea class="form-control" placeholder="Escreva sua mensagem" id="message" name="msg" minlength="48"
+                    maxlength="512" required style="height: 128px; resize: none"></textarea>
+                <label for="message">Mensagem</label>
+                <div class="invalid-feedback">
+                    Sua mensagem deve ter no mínimo 48 e no máximo 512 caracteres, digite uma mensagem válida.
+                </div>
+                <div class="valid-feedback">
+                    Sua mensagem está dentro dos padrões!
+                </div>
+            </div>
+        </div>
+        <div class="d-flex container justify-content-end">
+            <button type="submit" class="btn btn-primary" id="liveAlertBtn">Enviar</button>
+        </div>
+    </form>
+</div>
+
+<!--JQuery-->
+<script src="{% static '/js/jquery/jquery.js' %}"></script>
+<!--JQuery Mask-->
+<script src="{% static '/js/jquery-mask/jquery.maskedinput.min.js' %}"></script>
+<!--My Scripts-->
+<script src="{% static '/js/project/form-validation.js' %}"></script>
+
+{% block script %}
+<script>
+    ($(document).ready(function () {
+        $('#phone-number').mask('(99) 99999-9999')
+    }))
+</script>
+{% endblock script %}
+{% endblock body %}
