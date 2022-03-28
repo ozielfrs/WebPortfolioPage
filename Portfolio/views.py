@@ -1,5 +1,3 @@
-from multiprocessing import context
-from turtle import heading
 from django.shortcuts import render
 from Portfolio.models import Message
 
@@ -27,6 +25,7 @@ def ContactMe(request):
         linkedin = request.POST['linkedinurl']
         subject = request.POST['sbjt']
         message = request.POST['msg']
-        Data = Message(e_mail=email, first_name = fname, last_name = lname, phone_number = pnumber, liurl = linkedin,subject = subject, message = message)
+        Data = Message(e_mail=email, first_name=fname, last_name=lname,
+                       phone_number=pnumber, liurl=linkedin, subject=subject, message=message)
         Data.save()
     return render(request, 'contact.html')
