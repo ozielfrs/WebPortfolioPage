@@ -15,7 +15,18 @@
 
 {% block body %}
 <div class="container-sm">
-    <h1 class="display-1-sm text-center my-4" id="contactme"> Fale Comigo </h1>
+    <h1 class="display-1-sm text-center my-4" id="contactme"> Me contate a partir desses serviços de mensagem </h1>
+    <div class="container d-flex justify-content-evenly border-bottom py-3">
+        <a href="https://wa.me/+5533988863216" target="_blank" rel="noopener noreferrer"
+            class="btn btn-outline-success"><i class="fa-brands fa-whatsapp"></i> Contatar via Whatsapp</a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ozil2001@gmail.com" target="_blank"
+            rel="noopener noreferrer" class="btn btn-outline-danger"><i class="fa-brands fa-google"></i> Contatar via
+            Google Mail</a>
+        <a href="https://outlook.com/?path=/mail/action/compose&to=ziel2001@hotmail.com" target="_blank"
+            rel="noopener noreferrer" class="btn btn-outline-primary"><i class="fa-brands fa-windows"></i> Contatar via
+            Outlook</a>
+    </div>
+    <h2 class="display-2-sm text-center my-4" id="contactme"> Ou me envie uma mensagem por aqui </h2>
     <div id="liveAlertPlaceholder"></div>
     <form class="needs-validation" action="/contact" method="post" onsubmit="not_valid()" novalidate>
         {% csrf_token %}
