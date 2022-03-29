@@ -11,4 +11,5 @@ urlpatterns = [
     path('about', views.About, name='About Page'),
     path('projects', views.Projects, name='Projects Page'),
     path('contact', views.ContactMe, name='Contact Page'),
+    path('contact/success', views.Success, name='Success Page'),
 ]

@@ -19,10 +19,10 @@
 
 {% block body %}
 <main class="px-3 text-center">
-    <h1>Obrigado por enviar sua mensagem{{Name}}!</h1>
+    <h1>Obrigado por enviar sua mensagem!</h1>
+    <img src="{% static '/media/glorious_success.png' %}" alt="Success" width="512">
     <p class="lead">Agora você pode continuar explorando o site o quanto quiser.
     </p>
-    <img src="{% static '/media/glorious_success.png' %}" alt="Success" width="512">
 </main>
 {% endblock body %}
 {% block footerlink %}link-light{% endblock footerlink %}
