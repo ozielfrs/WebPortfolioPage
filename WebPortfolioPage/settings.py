@@ -78,14 +78,16 @@ WSGI_APPLICATION = 'WebPortfolioPage.wsgi.application'
 
 DATABASES = {
     'default': {
+        'NAME': 'd3tdmh2ve86m5o',
+        'HOST': 'ec2-52-21-136-176.compute-1.amazonaws.com',
+        'PORT': 5432,
+        'USER': 'ihvsjmjcnbolfc',
+        'PASSWORD': '899e6399daee0e940a801419e163a3333bd7ea545965d8a10b40be59a815baa4',
+    },
+    '0': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME' : BASE_DIR / 'db.sqlite3'
-        #'NAME': 'd3tdmh2ve86m5o',
-        #'HOST': 'ec2-52-21-136-176.compute-1.amazonaws.com',
-        #'PORT': 5432,
-        #'USER': 'ihvsjmjcnbolfc',
-        #'PASSWORD': '899e6399daee0e940a801419e163a3333bd7ea545965d8a10b40be59a815baa4',
-    }
+        'NAME': BASE_DIR / 'db.sqlite3'
+    },
 }
 
 # Password validation
