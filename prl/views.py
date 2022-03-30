@@ -39,9 +39,6 @@ def ContactMe(request):
             'subject': request.POST['sbjt'],
             'message': request.POST['msg'],
         }
-        context = {
-            'Name': " " + data['fname']
-        }
 
         if data_validation(data):
             dataAsMessage = Message(
@@ -55,7 +52,7 @@ def ContactMe(request):
             )
             dataAsMessage.save()
             return redirect(Success)
-        else:
-            return redirect(ContactMe)
-            # should_render_success(context)
+            
+        return redirect(ContactMe)
+
     return render(request, 'contact.html')

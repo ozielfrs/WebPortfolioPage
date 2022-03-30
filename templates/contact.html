@@ -26,13 +26,13 @@
     </div>
     <h2 class="display-2-sm text-center my-4" id="contactme"> Ou me envie uma mensagem por aqui </h2>
     <div id="liveAlertPlaceholder"></div>
-    <form class="needs-validation" action="/contact" method="post" onsubmit="not_valid()" novalidate>
+    <form class="needs-validation" method="post" onsubmit="not_valid()" novalidate>
         {% csrf_token %}
         <div class="container">
 
             <div class="form-floating mb-3">
                 <input type="email" class="form-control" id="emailadress" name="email" placeholder="Endereço de Email"
-                    aria-describedby="basic-addon1" required>
+                    required>
                 <label for="emailadress">Email</label>
                 <div class="invalid-feedback">
                     Por favor, adicione um email válido.
@@ -44,8 +44,7 @@
 
             <div class="row g-3 mb-3">
                 <div class="col">
-                    <input type="text" class="form-control" id="firstname" name="fname" placeholder="Nome"
-                        aria-label="Name" required>
+                    <input type="text" class="form-control" id="firstname" name="fname" placeholder="Nome" required>
                     <div class="invalid-feedback">
                         Por favor, insira um nome válido.
                     </div>
@@ -55,8 +54,7 @@
                 </div>
 
                 <div class="col">
-                    <input type="text" class="form-control" id="lastname" name="lname" placeholder="Sobrenome"
-                        aria-label="LastName" required>
+                    <input type="text" class="form-control" id="lastname" name="lname" placeholder="Sobrenome" required>
                     <div class="invalid-feedback">
                         Por favor, acrescente um sobrenome válido.
                     </div>
@@ -70,19 +68,13 @@
                 <span class="input-group-text" id="igtPhone"><img src="{% static '/media/br_flag.png' %}"
                         alt="Bandeira do Brasil" width="32">+55</span>
                 <input type="text" class="form-control" id="phone-number" name="pnumber"
-                    placeholder="Número de Telefone" required>
-                <div class="invalid-feedback">
-                    Por favor, preencha o campo com um número de telefone válido.
-                </div>
-                <div class="valid-feedback">
-                    Sensacional!
-                </div>
+                    placeholder="Número de Telefone">
             </div>
 
             <div class="input-group mb-3">
                 <span class="input-group-text" id="igtUrl">https://www.linkedin.com/in/</span>
                 <input type="text" class="form-control" id="liurl" name="linkedinurl"
-                    placeholder="Link para LinkedIn (Opcional)" aria-describedby="basic-addon3">
+                    placeholder="Link para LinkedIn (Opcional)">
             </div>
 
             <div class="form-floating mb-3">

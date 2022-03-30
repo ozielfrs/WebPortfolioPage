@@ -16,7 +16,7 @@
 })()
 
 function not_valid() {
-  var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+  var alertPlaceholder = $('#liveAlertPlaceholder')
 
   function alert(type, message) {
     if (!alertPlaceholder.hasChildNodes()) {
