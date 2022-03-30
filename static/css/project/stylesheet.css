@@ -1,0 +1,51 @@
+#projects-page #custom-cards #custom-card-0 {
+    background-image: url('../../../static/media/programming_bg.png');
+    background-position: 50% 10%;
+    background-size: 64px;
+    background-repeat: no-repeat;
+}
+
+#projects-page #custom-cards #custom-card-1 {
+    background-image: url('../../../static/media/discord_bg.png');
+    background-position: 50% 10%;
+    background-size: 64px;
+    background-repeat: no-repeat;
+}
+
+#projects-page #custom-cards #custom-card-2 {
+    background-image: url('../../../static/media/dio_bg.png');
+    background-position: 50% 10%;
+    background-size: 64px;
+    background-repeat: no-repeat;
+}
+
+#projects-page #custom-cards #custom-card-1-text {
+    color: #050b4c;
+}
+
+#about-page #unifei-bg {
+    background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.99)), url('../../../static/media/UNIFEI_logo.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#contact-page #subject {
+    resize: none;
+}
+
+#contact-page #message {
+    height: 112px;
+    resize: none;
+}
+
+#home-page {
+    background: linear-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, 1)), url('../../../static/media/home_bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#index-body #success-page {
+    background-color: #02021c;
+}

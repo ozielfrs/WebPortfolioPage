@@ -14,113 +14,116 @@
 {% block aboutactive %}link-dark{% endblock aboutactive %}
 
 {% block body %}
-<div class="container-sm">
-    <h1 class="display-1-sm text-center my-4" id="contactme"> Me contate a partir desses serviços de mensagem </h1>
-    <div class="container d-flex justify-content-evenly border-bottom py-3">
-        <a href="https://wa.me/+5533988863216" target="_blank" rel="noopener noreferrer"
-            class="btn btn-outline-success mx-2"><i class="fa-brands fa-whatsapp"></i> Whatsapp</a>
-        <a href="mailto:ozil2001@gmail.com" target="_blank" rel="noopener noreferrer"
-            class="btn btn-outline-danger mx-2"><i class="fa-brands fa-google"></i> Google Mail</a>
-        <a href="https://t.me/justoziel" target="_blank" rel="noopener noreferrer"
-            class="btn btn-outline-primary mx-2"><i class="fa-brands fa-telegram"></i> Telegram</a>
+<div id="contact-page">
+    <div class="container-sm">
+        <h1 class="display-1-sm text-center my-4"> Me contate a partir desses serviços de mensagem </h1>
+        <div class="container d-flex justify-content-evenly border-bottom py-3">
+            <a href="https://wa.me/+5533988863216" target="_blank" rel="noopener noreferrer"
+                class="btn btn-outline-success mx-2"><i class="fa-brands fa-whatsapp"></i> Whatsapp</a>
+            <a href="mailto:ozil2001@gmail.com" target="_blank" rel="noopener noreferrer"
+                class="btn btn-outline-danger mx-2"><i class="fa-brands fa-google"></i> Google Mail</a>
+            <a href="https://t.me/justoziel" target="_blank" rel="noopener noreferrer"
+                class="btn btn-outline-primary mx-2"><i class="fa-brands fa-telegram"></i> Telegram</a>
+        </div>
+        <h2 class="display-2-sm text-center my-4"> Ou me envie uma mensagem por aqui </h2>
+        <div id="liveAlertPlaceholder"></div>
+        <form class="needs-validation" method="post" onsubmit="not_valid()" novalidate>
+            {% csrf_token %}
+            <div class="container">
+
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="emailadress" name="email"
+                        placeholder="Endereço de Email" required>
+                    <label for="emailadress">Email</label>
+                    <div class="invalid-feedback">
+                        Por favor, adicione um email válido.
+                    </div>
+                    <div class="valid-feedback">
+                        Maravilha!
+                    </div>
+                </div>
+
+                <div class="row g-3 mb-3">
+                    <div class="col">
+                        <input type="text" class="form-control" id="firstname" name="fname" placeholder="Nome" required>
+                        <div class="invalid-feedback">
+                            Por favor, insira um nome válido.
+                        </div>
+                        <div class="valid-feedback">
+                            Fantástico!
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <input type="text" class="form-control" id="lastname" name="lname" placeholder="Sobrenome"
+                            required>
+                        <div class="invalid-feedback">
+                            Por favor, acrescente um sobrenome válido.
+                        </div>
+                        <div class="valid-feedback">
+                            Incrível!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="igtPhone"><img src="{% static '/media/br_flag.png' %}"
+                            alt="Bandeira do Brasil" width="32">+55</span>
+                    <input type="text" class="form-control" id="phone-number" name="pnumber"
+                        placeholder="Número de Telefone">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="igtUrl">https://www.linkedin.com/in/</span>
+                    <input type="text" class="form-control" id="liurl" name="linkedinurl"
+                        placeholder="Link para LinkedIn (Opcional)">
+                </div>
+
+                <div class="form-floating mb-3">
+                    <textarea class="form-control" placeholder="Assunto" id="subject" name="sbjt" minlength="4"
+                        required></textarea>
+                    <label for="subject">Assunto</label>
+                    <div class="invalid-feedback">
+                        Por favor, digite um assunto para a mensagem, ele deve ter no mínimo 4 caracteres.
+                    </div>
+                    <div class="valid-feedback">
+                        Legal!
+                    </div>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <textarea class="form-control" placeholder="Escreva sua mensagem" id="message" name="msg"
+                        minlength="48" maxlength="512" required></textarea>
+                    <label for="message">Mensagem</label>
+                    <div class="invalid-feedback">
+                        Sua mensagem deve ter no mínimo 48 e no máximo 512 caracteres, digite uma mensagem válida.
+                    </div>
+                    <div class="valid-feedback">
+                        Sua mensagem está dentro dos padrões!
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex container justify-content-end">
+                <button type="submit" class="btn btn-primary" id="liveAlertBtn">Enviar</button>
+            </div>
+        </form>
     </div>
-    <h2 class="display-2-sm text-center my-4" id="contactme"> Ou me envie uma mensagem por aqui </h2>
-    <div id="liveAlertPlaceholder"></div>
-    <form class="needs-validation" method="post" onsubmit="not_valid()" novalidate>
-        {% csrf_token %}
-        <div class="container">
 
-            <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="emailadress" name="email" placeholder="Endereço de Email"
-                    required>
-                <label for="emailadress">Email</label>
-                <div class="invalid-feedback">
-                    Por favor, adicione um email válido.
-                </div>
-                <div class="valid-feedback">
-                    Maravilha!
-                </div>
-            </div>
+    <!--JQuery-->
+    <script src="{% static '/js/jquery/jquery.js' %}"></script>
+    <!--JQuery Mask-->
+    <script src="{% static '/js/jquery-mask/jquery.maskedinput.min.js' %}"></script>
+    <!--My Scripts-->
+    <script src="{% static '/js/project/form-validation.js' %}"></script>
 
-            <div class="row g-3 mb-3">
-                <div class="col">
-                    <input type="text" class="form-control" id="firstname" name="fname" placeholder="Nome" required>
-                    <div class="invalid-feedback">
-                        Por favor, insira um nome válido.
-                    </div>
-                    <div class="valid-feedback">
-                        Fantástico!
-                    </div>
-                </div>
-
-                <div class="col">
-                    <input type="text" class="form-control" id="lastname" name="lname" placeholder="Sobrenome" required>
-                    <div class="invalid-feedback">
-                        Por favor, acrescente um sobrenome válido.
-                    </div>
-                    <div class="valid-feedback">
-                        Incrível!
-                    </div>
-                </div>
-            </div>
-
-            <div class="input-group mb-3">
-                <span class="input-group-text" id="igtPhone"><img src="{% static '/media/br_flag.png' %}"
-                        alt="Bandeira do Brasil" width="32">+55</span>
-                <input type="text" class="form-control" id="phone-number" name="pnumber"
-                    placeholder="Número de Telefone">
-            </div>
-
-            <div class="input-group mb-3">
-                <span class="input-group-text" id="igtUrl">https://www.linkedin.com/in/</span>
-                <input type="text" class="form-control" id="liurl" name="linkedinurl"
-                    placeholder="Link para LinkedIn (Opcional)">
-            </div>
-
-            <div class="form-floating mb-3">
-                <textarea class="form-control" placeholder="Assunto" id="subject" name="sbjt" minlength="4" required
-                    style="resize: none"></textarea>
-                <label for="subject">Assunto</label>
-                <div class="invalid-feedback">
-                    Por favor, digite um assunto para a mensagem, ele deve ter no mínimo 4 caracteres.
-                </div>
-                <div class="valid-feedback">
-                    Legal!
-                </div>
-            </div>
-
-            <div class="form-floating mb-3">
-                <textarea class="form-control" placeholder="Escreva sua mensagem" id="message" name="msg" minlength="48"
-                    maxlength="512" required style="height: 128px; resize: none"></textarea>
-                <label for="message">Mensagem</label>
-                <div class="invalid-feedback">
-                    Sua mensagem deve ter no mínimo 48 e no máximo 512 caracteres, digite uma mensagem válida.
-                </div>
-                <div class="valid-feedback">
-                    Sua mensagem está dentro dos padrões!
-                </div>
-            </div>
-        </div>
-        <div class="d-flex container justify-content-end">
-            <button type="submit" class="btn btn-primary" id="liveAlertBtn">Enviar</button>
-        </div>
-    </form>
+    {% block script %}
+    <script>
+        ($(document).ready(function () {
+            $('#phone-number').mask('(99) 99999-9999')
+        }))
+    </script>
+    {% endblock script %}
 </div>
-
-<!--JQuery-->
-<script src="{% static '/js/jquery/jquery.js' %}"></script>
-<!--JQuery Mask-->
-<script src="{% static '/js/jquery-mask/jquery.maskedinput.min.js' %}"></script>
-<!--My Scripts-->
-<script src="{% static '/js/project/form-validation.js' %}"></script>
-
-{% block script %}
-<script>
-    ($(document).ready(function () {
-        $('#phone-number').mask('(99) 99999-9999')
-    }))
-</script>
-{% endblock script %}
 {% endblock body %}
 
 {% block footerlink %}link-dark{% endblock footerlink %}

@@ -14,92 +14,90 @@
 {% block aboutactive %}link-dark{% endblock aboutactive %}
 
 {% block body %}
-<div class="container my-5">
-    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg text-center">
-        <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
-            <h1 class="display-4 fw-bold lh-1">Conheça o meu Github</h1>
-            <p class="lead">Não costumo utilizar muito o Github para publicações de projetos. Alguns do que já fiz
-                permanecem na plataforma como repositórios públicos, existem alguns privados por conta de segurança com
-                o intuito de impedir que códigos fossem propagados sem minha autorização.
-            </p>
-            <div class="container py-3">
-                <a href="https://github.com/o-ziel?tab=repositories" target="_blank" rel="noopener noreferrer"
-                    class="btn btn-outline-secondary btn-lg px-4">
-                    <i class="fa-brands fa-github"></i> Ver repositórios públicos
-                </a>
+<div id="projects-page">
+    <div class="container my-5">
+        <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg text-center">
+            <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+                <h1 class="display-4 fw-bold lh-1">Conheça o meu Github</h1>
+                <p class="lead">Não costumo utilizar muito o Github para publicações de projetos. Alguns do que já fiz
+                    permanecem na plataforma como repositórios públicos, existem alguns privados por conta de segurança
+                    com
+                    o intuito de impedir que códigos fossem propagados sem minha autorização.
+                </p>
+                <div class="container py-3">
+                    <a href="https://github.com/o-ziel?tab=repositories" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-outline-secondary btn-lg px-4">
+                        <i class="fa-brands fa-github"></i> Ver repositórios públicos
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-            <img class="rounded-3" src="{% static '/media/Github_Profile.png' %}" alt="" width="736">
+            <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+                <img class="rounded-3" src="{% static '/media/Github_Profile.png' %}" alt="Oziel's Github Profile"
+                    width="736">
+            </div>
         </div>
     </div>
-</div>
 
-<div class="container px-4 py-5" id="custom-cards">
-    <h2 class="pb-2 border-bottom">Mais informações</h2>
+    <div class="container px-4 py-5" id="custom-cards">
+        <h2 class="pb-2 border-bottom">Mais informações</h2>
 
-    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-        <div class="col">
-            <div class="card card-cover h-100 overflow-hidden text-light bg-dark rounded-5 shadow-lg" style="background-image: url({% static '/media/programming_bg.png' %});
-                    background-position: 50% 10%;
-                    background-size: 64px;
-                    background-repeat: no-repeat;">
-                <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                    <h4 class="pb-5 mt-5 mb-4 lh-1 text-center">A maioria das linguagens de
-                        programação que conheço foram aprendidas por meio de pesquisa individual</h4>
-                    <ul class="d-flex list-unstyled align-items-center justify-content-center mt-auto">
-                        <li>
-                            <a href="https://github.com/o-ziel" target="_blank" rel="noopener noreferrer">
-                                <img src="{% static '/media/Github_Avatar.png' %}" alt="Oziel's Github Profile "
-                                    width="32" height="32" class="rounded-circle border border-white">
-                            </a>
-                        </li>
-                    </ul>
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-light bg-dark rounded-5 shadow-lg"
+                    id="custom-card-0">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                        <h4 class="pb-5 mt-5 mb-4 lh-1 text-center">A maioria das linguagens de
+                            programação que conheço foram aprendidas por meio de pesquisa individual</h4>
+                        <ul class="d-flex list-unstyled align-items-center justify-content-center mt-auto">
+                            <li>
+                                <a href="https://github.com/o-ziel" target="_blank" rel="noopener noreferrer">
+                                    <img src="{% static '/media/Github_Avatar.png' %}" alt="Oziel's Github Avatar"
+                                        width="32" height="32" class="rounded-circle border border-white">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="col">
-            <div class="card card-cover h-100 overflow-hidden bg-light rounded-5 shadow-lg" style="background-image: url({% static '/media/discord_bg.png' %});
-                    background-position: 50% 10%;
-                    background-size: 64px;
-                    background-repeat: no-repeat;">
-                <div class="d-flex flex-column h-100 p-5 text-shadow-1">
-                    <a href="https://discord.js.org/#/docs/" target="_blank" rel="noopener noreferrer"
-                        class="text-decoration-none pb-5 mt-5 mb-4 lh-1 h4 text-center" style="color: #050b4c;">
-                        Meu primeiro projeto com coleção de dados de usuários foi um bot no Discord com um módulo do
-                        Node.js
-                    </a>
-                    <ul class="d-flex list-unstyled align-items-center justify-content-center mt-auto">
-                        <li>
-                            <a href="https://github.com/o-ziel" target="_blank" rel="noopener noreferrer">
-                                <img src="{% static '/media/Github_Avatar.png' %}" alt="Oziel's Github Profile "
-                                    width="32" height="32" class="rounded-circle border border-white">
-                            </a>
-                        </li>
-                    </ul>
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden bg-light rounded-5 shadow-lg" id="custom-card-1">
+                    <div class="d-flex flex-column h-100 p-5 text-shadow-1">
+                        <a href="https://discord.js.org/#/docs/" target="_blank" rel="noopener noreferrer"
+                            class="text-decoration-none pb-5 mt-5 mb-4 lh-1 h4 text-center" id="custom-card-1-text">
+                            Meu primeiro projeto com coleção de dados de usuários foi um bot no Discord com um módulo do
+                            Node.js
+                        </a>
+                        <ul class="d-flex list-unstyled align-items-center justify-content-center mt-auto">
+                            <li>
+                                <a href="https://github.com/o-ziel" target="_blank" rel="noopener noreferrer">
+                                    <img src="{% static '/media/Github_Avatar.png' %}" alt="Oziel's Github Avatar"
+                                        width="32" height="32" class="rounded-circle border border-white">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="col">
-            <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url({% static '/media/dio_bg.png' %});
-                    background-position: 50% 12.5%;
-                    background-size: 64px;
-                    background-repeat: no-repeat;">
-                <div class="d-flex flex-column h-100 p-5 text-shadow-1">
-                    <a href="https://www.dio.me/bootcamp/html-web-developer" target="_blank" rel="noopener noreferrer"
-                        class="text-decoration-none pb-5 mt-5 mb-4 lh-1 h4 text-center text-light">
-                        Aprendi HTML, CSS e JS a partir de um Bootcamp oferecido pela DIO
-                    </a>
-                    <ul class="d-flex list-unstyled align-items-center justify-content-center mt-auto">
-                        <li>
-                            <a href="https://github.com/o-ziel" target="_blank" rel="noopener noreferrer">
-                                <img src="{% static '/media/Github_Avatar.png' %}" alt="Oziel's Github Profile "
-                                    width="32" height="32" class="rounded-circle border border-white">
-                            </a>
-                        </li>
-                    </ul>
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                    id="custom-card-2">
+                    <div class="d-flex flex-column h-100 p-5 text-shadow-1">
+                        <a href="https://www.dio.me/bootcamp/html-web-developer" target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-decoration-none pb-5 mt-5 mb-4 lh-1 h4 text-center text-light">
+                            Aprendi HTML, CSS e JS a partir de um Bootcamp oferecido pela DIO
+                        </a>
+                        <ul class="d-flex list-unstyled align-items-center justify-content-center mt-auto">
+                            <li>
+                                <a href="https://github.com/o-ziel" target="_blank" rel="noopener noreferrer">
+                                    <img src="{% static '/media/Github_Avatar.png' %}" alt="Oziel's Github Avatar"
+                                        width="32" height="32" class="rounded-circle border border-white">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

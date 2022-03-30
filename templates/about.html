@@ -14,92 +14,100 @@
 {% block aboutactive %}{% endblock aboutactive %}
 
 {% block body %}
-<main>
-    <div class="container">
-        <div class="bg-white rounded-3">
-            <div class="container-fluid py-5">
-                <div
-                    class="row flex-lg-row-reverse align-items-center g-5 py-5 justify-content-center align-items-center">
-                    <div class="col-10 col-sm-8 col-lg-6">
-                        <img src="{% static '/media/html_code.webp' %}" class="d-block mx-lg-auto img-fluid rounded-3"
-                            alt="Programming" width="700" height="500" loading="lazy">
-                    </div>
-                    <div class="col-lg-6">
-                        <h1 class="display-5 fw-bold lh-1 mb-3 text-center">Me conheça melhor por meio do Github e
-                            LinkedIn</h1>
-                        <p class="lead text-center">A comunidade de desenvolvedores do Github é hoje a maior do mundo,
-                            lá você pode encontrar alguns dos projetos que disponibilizei publicamente. Estou também
-                            presente no LinkedIn, onde estão presentes todas as informações curriculares e algumas mais
-                            sobre mim.
-                        </p>
+<div id="about-page">
+    <main>
+        <div class="container">
+            <div class="bg-white rounded-3">
+                <div class="container-fluid py-5">
+                    <div
+                        class="row flex-lg-row-reverse align-items-center g-5 py-5 justify-content-center align-items-center">
+                        <div class="col-10 col-sm-8 col-lg-6">
+                            <img src="{% static '/media/html_code.webp' %}"
+                                class="d-block mx-lg-auto img-fluid rounded-3" alt="Programming" width="700"
+                                height="500" loading="lazy">
+                        </div>
+                        <div class="col-lg-6">
+                            <h1 class="display-5 fw-bold lh-1 mb-3 text-center">Me conheça melhor por meio do Github e
+                                LinkedIn</h1>
+                            <p class="lead text-center">A comunidade de desenvolvedores do Github é hoje a maior do
+                                mundo,
+                                lá você pode encontrar alguns dos projetos que disponibilizei publicamente. Estou também
+                                presente no LinkedIn, onde estão presentes todas as informações curriculares e algumas
+                                mais
+                                sobre mim.
+                            </p>
 
-                        <div class="container d-flex justify-content-evenly">
-                            <a href="https://github.com/o-ziel" target="_blank" rel="noopener noreferrer"
-                                class="btn btn-md btn-outline-primary me-2">
-                                <i class="fa-brands fa-github"></i> Ir para Github
-                            </a>
-                            <a href="https://www.linkedin.com/in/o-ziel" target="_blank" rel="noopener noreferrer"
-                                class="btn btn-md btn-outline-primary me-2">
-                                <i class="fa-brands fa-linkedin"></i> Ir para LinkedIn
-                            </a>
+                            <div class="container d-flex justify-content-evenly">
+                                <a href="https://github.com/o-ziel" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-md btn-outline-primary me-2">
+                                    <i class="fa-brands fa-github"></i> Ir para Github
+                                </a>
+                                <a href="https://www.linkedin.com/in/o-ziel" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-md btn-outline-primary me-2">
+                                    <i class="fa-brands fa-linkedin"></i> Ir para LinkedIn
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="p-2 mt-3 row align-items-md-stretch">
-            <div class="col-md-6">
-                <div class="h-100 p-5 text-white bg-dark border rounded-3 text-center" style="background: linear-gradient(rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.67)), url({% static '/media/UNIFEI_logo.png' %});
-                         background-position:center;
-                         background-size: contain;
-                         background-repeat: no-repeat;">
-                    <h2>Conheça onde estudo</h2>
-                    <p class="lead text-center">Atualmente curso graduação em Engenharia de Computação na Universidade
-                        Federal de Itajubá e sou Técnico formado em Manutenção e Suporte em Informática pelo Instituto
-                        Federal de Minas Gerais.</p>
-                    <a href="https://unifei.edu.br/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                        <i class="fa-solid fa-chalkboard-user"></i> Conhecer</button>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="h-100 p-5 bg-light border rounded-3 text-center">
-                    <h2>Sobre minha experiência</h2>
-                    <p class="text-center">Meu contato com a programação começou quando estava no Ensino Médio, onde
-                        aprendi uma linguagem de programação pela primeira vez, ela sendo Java. Costumava usar essa
-                        linguagem como passa-tempo fora dos horários de aulas. Depois de ingressar na faculdade aprendi
-                        C/C++ e comecei a me identificar com outras novas linguagens. Considero minhas habilidades em
-                        C/C++ como avançadas, em Java me considero como intermediário e em relação ao resto das
-                        linguagens eu considero as habilidades como básicas.
-                    </p>
-                    <p class="text-center">Durante o segundo semestre do ano passado auxiliei alunos com dificuldades em
-                        programação via Monitoria. O resultado foi extremamente satisfatório.</p>
-                </div>
-            </div>
-
-            <div class="container mt-5 p-2 bg-dark text-light rounded">
-                <div class="container text-center">
-                    <a href="https://store.steampowered.com/app/1289310/Helltaker" target="_blank"
-                        rel="noopener noreferrer" class="text-decoration-none">
-                        <img src="{% static '/media/see_more_jus.png' %}" width="48">
-                        <button class="btn btn-secondary">
-                            <i class="fa-brands fa-steam"></i> Conheça Helltaker
-                        </button>
-                    </a>
-                </div>
-                <div class="container mt-3 text-center">
-                    <p class="lead">Todas as artes utilizadas pertencem ao artista e dono do jogo
-                        <a href="https://mobile.twitter.com/vanripperart" target="_blank" rel="noopener noreferrer"
-                            class="btn btn-secondary">
-                            <i class="fa-brands fa-twitter"></i> Łukasz (Vanripper) Piskorz
+            <div class="p-2 mt-3 row align-items-md-stretch">
+                <div class="col-md-6 mb-3">
+                    <div class="h-100 p-5 text-white bg-dark border rounded-3 text-center" id="unifei-bg">
+                        <h2>Conheça onde estudo</h2>
+                        <p class="lead text-center">Atualmente curso graduação em Engenharia de Computação na
+                            Universidade
+                            Federal de Itajubá e sou Técnico formado em Manutenção e Suporte em Informática pelo
+                            Instituto
+                            Federal de Minas Gerais.</p>
+                        <a href="https://unifei.edu.br/" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-primary">
+                            <i class="fa-solid fa-chalkboard-user"></i> Conhecer</button>
                         </a>
-                    </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="h-100 p-5 bg-light border rounded-3 text-center">
+                        <h2>Sobre minha experiência</h2>
+                        <p class="text-center">Meu contato com a programação começou quando estava no Ensino Médio, onde
+                            aprendi uma linguagem de programação pela primeira vez, ela sendo Java. Costumava usar essa
+                            linguagem como passa-tempo fora dos horários de aulas. Depois de ingressar na faculdade
+                            aprendi
+                            C/C++ e comecei a me identificar com outras novas linguagens. Considero minhas habilidades
+                            em
+                            C/C++ como avançadas, em Java me considero como intermediário e em relação ao resto das
+                            linguagens eu considero as habilidades como básicas.
+                        </p>
+                        <p class="text-center">Durante o segundo semestre do ano passado auxiliei alunos com
+                            dificuldades em
+                            programação via Monitoria. O resultado foi extremamente satisfatório.</p>
+                    </div>
+                </div>
+
+                <div class="container mt-5 p-2 bg-dark text-light rounded">
+                    <div class="container text-center">
+                        <a href="https://store.steampowered.com/app/1289310/Helltaker" target="_blank"
+                            rel="noopener noreferrer" class="text-decoration-none">
+                            <img src="{% static '/media/see_more_jus.png' %}" width="48" alt="Justice Demon">
+                            <button class="btn btn-secondary">
+                                <i class="fa-brands fa-steam"></i> Conheça Helltaker
+                            </button>
+                        </a>
+                    </div>
+                    <div class="container mt-3 text-center">
+                        <p class="lead">Todas as artes utilizadas pertencem ao artista e dono do jogo
+                            <a href="https://mobile.twitter.com/vanripperart" target="_blank" rel="noopener noreferrer"
+                                class="btn btn-secondary">
+                                <i class="fa-brands fa-twitter"></i> Łukasz (Vanripper) Piskorz
+                            </a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</main>
+    </main>
+</div>
 {% endblock body %}
 {% block footerlink %}link-dark{% endblock footerlink %}
 {% block footerlink0 %}link-dark{% endblock footerlink0 %}
