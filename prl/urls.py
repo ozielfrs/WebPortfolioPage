@@ -8,10 +8,6 @@ admin.site.site_title = 'Oziel\'s Portfolio Administration'
 urlpatterns = [
     path('', views.Home, name='Main Homepage'),
 
-    path('home/', views.Home, name='Main Homepage'),
-    path('home', views.Home, name='Main Homepage'),
-
-
     path('about/', views.About, name='About Page'),
     path('about', views.About, name='About Page'),
 
