@@ -1,31 +1,33 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block page-title %}Sucesso!{% endblock page-title %}
+
+{% block body-txt %}text-light{% endblock body-txt %}
+
+{% block bg-color %}style="background-color: #02021c;"{% endblock bg-color %}
+
+{% block header-oziel-txt-color %}text-light{% endblock header-oziel-txt-color %}
+
+{% block header-img-path %}
+{% static '/media/beel_grand.png' %}
+{% endblock header-img-path %}
+
+{% block home-active %}link-light{% endblock home-active %}
+{% block projects-active %}link-light{% endblock projects-active %}
+{% block contact-active %}link-light{% endblock contact-active %}
+{% block about-active %}link-light{% endblock about-active %}
+
+{% block body %}
 <div id="success-page">
-    {% extends 'index.html' %}
-    {% load static %}
-
-    {% block titlepage %}Sucesso!{% endblock titlepage %}
-
-    {% block bodytxt %}text-light{% endblock bodytxt %}
-
-    {% block oColor %}text-light{% endblock oColor %}
-
-    {% block headerimagepath %}
-    {% static '/media/beel_grand.png' %}
-    {% endblock headerimagepath %}
-
-    {% block homeactive %}link-light{% endblock homeactive %}
-    {% block projectsactive %}link-light{% endblock projectsactive %}
-    {% block contactactive %}link-light{% endblock contactactive %}
-    {% block aboutactive %}link-light{% endblock aboutactive %}
-
-    {% block body %}
-
     <main class="px-3 text-center">
         <h1>Obrigado por enviar sua mensagem!</h1>
         <img src="{% static '/media/glorious_success.png' %}" alt="Glorious Success" class="img-fluid">
         <p class="lead">Agora você pode continuar explorando o site o quanto quiser.
         </p>
     </main>
-    {% endblock body %}
-    {% block footerlink %}link-light{% endblock footerlink %}
-    {% block footerlink0 %}link-light{% endblock footerlink0 %}
 </div>
+{% endblock body %}
+
+{% block footer-link-0 %}link-light{% endblock footer-link-0 %}
+{% block footer-link-1 %}link-light{% endblock footer-link-1 %}

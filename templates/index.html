@@ -22,30 +22,30 @@
     <!--Font Awesome-->
     <script src="https://kit.fontawesome.com/930f71ec24.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="{% static '/media/favicon.png' %}" type="image/x-icon">
-    <title>Oziel | {% block titlepage %}{% endblock titlepage %}</title>
+    <title>Oziel | {% block page-title %}{% endblock page-title %}</title>
 </head>
 
-<body class="{% block bodytxt %}{% endblock bodytxt %}" id="index-body">
+<body class="{% block body-txt %}{% endblock body-txt %}" {% block bg-color %}{% endblock bg-color %}>
     <div class="container">
         <header class="d-flex flex-wrap align-items-center justify-content-md-between py-3 mb-4 border-bottom">
             <a href="/"
-                class="d-flex align-items-center col-md-3 mb-2 mb-md-0 {% block oColor %}{% endblock oColor %} text-decoration-none">
-                <img src="{% block headerimagepath %}{% endblock headerimagepath %}" width="112"
+                class="d-flex align-items-center col-md-3 mb-2 mb-md-0 {% block header-oziel-txt-color %}{% endblock header-oziel-txt-color %} text-decoration-none">
+                <img src="{% block header-img-path %}{% endblock header-img-path %}" width="112"
                     alt="Helltaker Justice Image">
                 Oziel's Portfolio
             </a>
 
             <ul class=" nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
                 <li class="nav-item"><a href="/home/"
-                        class="nav-link px-2 {% block homeactive %}{% endblock homeactive %}">Início</a></li>
+                        class="nav-link px-2 {% block home-active %}{% endblock home-active %}">Início</a></li>
                 <li class="nav-item"><a href="/projects/"
-                        class="nav-link px-2 {% block projectsactive %}{% endblock projectsactive %}">Projetos</a>
+                        class="nav-link px-2 {% block projects-active %}{% endblock projects-active %}">Projetos</a>
                 </li>
                 <li class="nav-item"><a href="/contact/"
-                        class="nav-link px-2 {% block contactactive %}{% endblock contactactive %}">Contato</a>
+                        class="nav-link px-2 {% block contact-active %}{% endblock contact-active %}">Contato</a>
                 </li>
                 <li class="nav-item"><a href="/about/"
-                        class="nav-link px-2 {% block aboutactive %}{% endblock aboutactive %}">Sobre</a></li>
+                        class="nav-link px-2 {% block about-active %}{% endblock about-active %}">Sobre</a></li>
             </ul>
         </header>
     </div>
@@ -54,15 +54,15 @@
     {% endblock body %}
 
     <div class="container">
-        <footer class="py-5">
+        <footer class="py-3">
             <div class="d-flex justify-content-between py-4 my-4 border-top">
                 <p>&copy; 2022, Desenvolvido por Oziel Ferreira.</p>
                 <ul class="list-unstyled d-flex">
-                    <li class="ms-3"><a class="{% block footerlink %}{% endblock footerlink %}"
+                    <li class="ms-3"><a class="{% block footer-link-0 %}{% endblock footer-link-0 %}"
                             href="https://github.com/o-ziel" target="_blank" rel="noopener noreferrer">
                             <i class="fa-brands fa-github"></i>
                         </a></li>
-                    <li class="ms-3"><a class="{% block footerlink0 %}{% endblock footerlink0 %}"
+                    <li class="ms-3"><a class="{% block footer-link-1 %}{% endblock footer-link-1 %}"
                             href="https://www.linkedin.com/in/o-ziel" target="_blank" rel="noopener noreferrer">
                             <i class="fa-brands fa-linkedin"></i>
                         </a></li>

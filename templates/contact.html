@@ -1,17 +1,18 @@
 {% extends 'index.html' %}
 {% load static %}
 
-{% block titlepage %}Fale Comigo{% endblock titlepage %}
+{% block page-title %}Contato{% endblock page-title %}
 
-{% block oColor %}text-dark{% endblock oColor %}
-{% block headerimagepath %}
+{% block header-oziel-txt-color %}text-dark{% endblock header-oziel-txt-color %}
+
+{% block header-img-path %}
 {% static '/media/jus_idle.png' %}
-{% endblock headerimagepath %}
+{% endblock header-img-path %}
 
-{% block homeactive %}link-dark{% endblock homeactive %}
-{% block projectsactive %}link-dark{% endblock projectsactive %}
-{% block contactactive %}{% endblock contactactive %}
-{% block aboutactive %}link-dark{% endblock aboutactive %}
+{% block home-active %}link-dark{% endblock home-active %}
+{% block projects-active %}link-dark{% endblock projects-active %}
+{% block contact-active %}{% endblock contact-active %}
+{% block about-active %}link-dark{% endblock about-active %}
 
 {% block body %}
 <div id="contact-page">
@@ -126,5 +127,5 @@
 </div>
 {% endblock body %}
 
-{% block footerlink %}link-dark{% endblock footerlink %}
-{% block footerlink0 %}link-dark{% endblock footerlink0 %}
+{% block footer-link-0 %}link-dark{% endblock footer-link-0 %}
+{% block footer-link-1 %}link-dark{% endblock footer-link-1 %}

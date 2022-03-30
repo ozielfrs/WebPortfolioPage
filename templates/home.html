@@ -1,17 +1,18 @@
 {% extends 'index.html' %}
 {% load static %}
 
-{% block titlepage %}Início{% endblock titlepage %}
+{% block page-title %}Início{% endblock page-title %}
 
-{% block oColor %}text-dark{% endblock oColor %}
-{% block headerimagepath %}
+{% block header-oziel-txt-color %}text-dark{% endblock header-oziel-txt-color %}
+
+{% block header-img-path %}
 {% static '/media/jus_pc.png' %}
-{% endblock headerimagepath %}
+{% endblock header-img-path %}
 
-{% block homeactive %}{% endblock homeactive %}
-{% block projectsactive %}link-dark{% endblock projectsactive %}
-{% block contactactive %}link-dark{% endblock contactactive %}
-{% block aboutactive %}link-dark{% endblock aboutactive %}
+{% block home-active %}{% endblock home-active %}
+{% block projects-active %}link-dark{% endblock projects-active %}
+{% block contact-active %}link-dark{% endblock contact-active %}
+{% block about-active %}link-dark{% endblock about-active %}
 
 {% block body %}
 <div id="home-page">
@@ -47,8 +48,7 @@
                     <div>
                         <h2>Me conheça melhor</h2>
                         <p>Você pode ver mais informações sobre minha experiência, onde estudo e algumas redes a partir
-                            da
-                            aba 'Sobre', ou, se preferir, deste botão.</p>
+                            da aba 'Sobre', ou, se preferir, deste botão.</p>
                         <a href="/about" class="btn btn-primary">
                             <i class="fa-solid fa-address-card"></i> Sobre
                         </a>
@@ -59,5 +59,6 @@
     </div>
 </div>
 {% endblock body %}
-{% block footerlink %}link-dark{% endblock footerlink %}
-{% block footerlink0 %}link-dark{% endblock footerlink0 %}
+
+{% block footer-link-0 %}link-dark{% endblock footer-link-0 %}
+{% block footer-link-1 %}link-dark{% endblock footer-link-1 %}

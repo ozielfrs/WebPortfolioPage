@@ -1,17 +1,18 @@
 {% extends 'index.html' %}
 {% load static %}
 
-{% block titlepage %}Sobre{% endblock titlepage %}
+{% block page-title %}Sobre{% endblock page-title %}
 
-{% block oColor %}text-dark{% endblock oColor %}
-{% block headerimagepath %}
+{% block header-oziel-txt-color %}text-dark{% endblock header-oziel-txt-color %}
+
+{% block header-img-path %}
 {% static '/media/jus_curious.png' %}
-{% endblock headerimagepath %}
+{% endblock header-img-path %}
 
-{% block homeactive %}link-dark{% endblock homeactive %}
-{% block projectsactive %}link-dark{% endblock projectsactive %}
-{% block contactactive %}link-dark{% endblock contactactive %}
-{% block aboutactive %}{% endblock aboutactive %}
+{% block home-active %}link-dark{% endblock home-active %}
+{% block projects-active %}link-dark{% endblock projects-active %}
+{% block contact-active %}link-dark{% endblock contact-active %}
+{% block about-active %}{% endblock about-active %}
 
 {% block body %}
 <div id="about-page">
@@ -30,11 +31,9 @@
                             <h1 class="display-5 fw-bold lh-1 mb-3 text-center">Me conheça melhor por meio do Github e
                                 LinkedIn</h1>
                             <p class="lead text-center">A comunidade de desenvolvedores do Github é hoje a maior do
-                                mundo,
-                                lá você pode encontrar alguns dos projetos que disponibilizei publicamente. Estou também
-                                presente no LinkedIn, onde estão presentes todas as informações curriculares e algumas
-                                mais
-                                sobre mim.
+                                mundo, lá você pode encontrar alguns dos projetos que disponibilizei publicamente. Estou
+                                também presente no LinkedIn, onde estão presentes todas as informações curriculares e
+                                algumas mais sobre mim.
                             </p>
 
                             <div class="container d-flex justify-content-evenly">
@@ -57,13 +56,11 @@
                     <div class="h-100 p-5 text-white bg-dark border rounded-3 text-center" id="unifei-bg">
                         <h2>Conheça onde estudo</h2>
                         <p class="lead text-center">Atualmente curso graduação em Engenharia de Computação na
-                            Universidade
-                            Federal de Itajubá e sou Técnico formado em Manutenção e Suporte em Informática pelo
-                            Instituto
-                            Federal de Minas Gerais.</p>
+                            Universidade Federal de Itajubá e sou Técnico formado em Manutenção e Suporte em Informática
+                            pelo Instituto Federal de Minas Gerais.</p>
                         <a href="https://unifei.edu.br/" target="_blank" rel="noopener noreferrer"
                             class="btn btn-primary">
-                            <i class="fa-solid fa-chalkboard-user"></i> Conhecer</button>
+                            <i class="fa-solid fa-chalkboard-user"></i> Conhecer
                         </a>
                     </div>
                 </div>
@@ -73,15 +70,12 @@
                         <p class="text-center">Meu contato com a programação começou quando estava no Ensino Médio, onde
                             aprendi uma linguagem de programação pela primeira vez, ela sendo Java. Costumava usar essa
                             linguagem como passa-tempo fora dos horários de aulas. Depois de ingressar na faculdade
-                            aprendi
-                            C/C++ e comecei a me identificar com outras novas linguagens. Considero minhas habilidades
-                            em
-                            C/C++ como avançadas, em Java me considero como intermediário e em relação ao resto das
-                            linguagens eu considero as habilidades como básicas.
+                            aprendi C/C++ e comecei a me identificar com outras novas linguagens. Considero minhas
+                            habilidades em C/C++ como avançadas, em Java me considero como intermediário e em relação ao
+                            resto das linguagens eu considero as habilidades como básicas.
                         </p>
                         <p class="text-center">Durante o segundo semestre do ano passado auxiliei alunos com
-                            dificuldades em
-                            programação via Monitoria. O resultado foi extremamente satisfatório.</p>
+                            dificuldades em programação via Monitoria. O resultado foi extremamente satisfatório.</p>
                     </div>
                 </div>
 
@@ -109,5 +103,6 @@
     </main>
 </div>
 {% endblock body %}
-{% block footerlink %}link-dark{% endblock footerlink %}
-{% block footerlink0 %}link-dark{% endblock footerlink0 %}
+
+{% block footer-link-0 %}link-dark{% endblock footer-link-0 %}
+{% block footer-link-1 %}link-dark{% endblock footer-link-1 %}
