@@ -16,14 +16,14 @@
 })()
 
 function not_valid() {
-  var alertPlaceholder = $('#liveAlertPlaceholder')
+  var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
 
-  function alert(type, message) {
-    if (!alertPlaceholder.hasChildNodes()) {
-      var wrapper = document.createElement('div')
-      wrapper.innerHTML = '<div class="alert alert-' + type + '" id="bigAlert" role="alert">' + message + '</div>'
-      alertPlaceholder.append(wrapper)
-    }
+  function alert(type = 'warning', message = 'Você deve preencher todos os campos corretamente') {
+    var wrapper = document.createElement('div')
+    wrapper.innerHTML = '<div class="alert alert-' + type + '" id="bigAlert" role="alert">' + message + '</div>'
+    alertPlaceholder.append(wrapper)
   }
-  alert('warning', 'Você deve preencher todos os campos corretamente')
+
+  if (alertPlaceholder.children.length == 0)
+    alert()
 }
