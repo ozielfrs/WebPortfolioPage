@@ -109,23 +109,20 @@
             </div>
         </form>
     </div>
-
-    <!--JQuery-->
-    <script src="{% static '/js/jquery/jquery.js' %}"></script>
-    <!--JQuery Mask-->
-    <script src="{% static '/js/jquery-mask/jquery.maskedinput.min.js' %}"></script>
-    <!--My Scripts-->
-    <script src="{% static '/js/project/form-validation.js' %}"></script>
-
-    {% block script %}
-    <script>
-        ($(document).ready(function () {
-            $('#phone-number').mask('(99) 99999-9999')
-        }))
-    </script>
-    {% endblock script %}
 </div>
 {% endblock body %}
+
+{% block Scripts %}
+<!--JQuery Mask-->
+<script src="{% static '/js/jquery-mask/jquery.maskedinput.min.js' %}"></script>
+<!--My Scripts-->
+<script src="{% static '/js/project/form-validation.js' %}"></script>
+<script>
+    $(document).ready(function () {
+        $('#phone-number').mask('(99) 99999-9999')
+    })
+</script>
+{% endblock Scripts %}
 
 {% block footer-link-0 %}link-dark{% endblock footer-link-0 %}
 {% block footer-link-1 %}link-dark{% endblock footer-link-1 %}

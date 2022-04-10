@@ -22,7 +22,7 @@
 <div id="success-page">
     <main class="px-3 text-center">
         <h1>Obrigado por enviar sua mensagem!</h1>
-        <img src="{% static '/media/glorious_success.png' %}" alt="Glorious Success" class="img-fluid">
+        <img src="/static/media/animation/success0001.png" alt="Glorious Success" class="img-fluid" id="animate">
         <p class="lead">Agora você pode continuar explorando o site o quanto quiser.
         </p>
     </main>
@@ -31,3 +31,8 @@
 
 {% block footer-link-0 %}link-light{% endblock footer-link-0 %}
 {% block footer-link-1 %}link-light{% endblock footer-link-1 %}
+
+{% block Scripts %}
+<!--My Scripts-->
+<script src="{% static '/js/project/animation.js' %}"></script>
+{% endblock Scripts %}
